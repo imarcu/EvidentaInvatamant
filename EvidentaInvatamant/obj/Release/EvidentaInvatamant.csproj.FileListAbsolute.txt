@@ -1,0 +1,10 @@
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\bin\Release\EvidentaInvatamant.exe.config
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\bin\Release\EvidentaInvatamant.exe
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\bin\Release\EvidentaInvatamant.pdb
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.SubjectDetails.resources
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.MainMenu.resources
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.Properties.Resources.resources
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.csproj.GenerateResource.Cache
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.exe
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.pdb
+C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.csprojResolveAssemblyReference.cache
