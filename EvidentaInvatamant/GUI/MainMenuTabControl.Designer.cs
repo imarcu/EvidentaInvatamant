@@ -1,6 +1,6 @@
 ﻿namespace EvidentaInvatamant
 {
-    partial class MainMenu:IMainMenuView
+    partial class MainMenu : IMainMenuView
     {
         /// <summary>
         /// Required designer variable.
@@ -86,6 +86,7 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.LogInLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainMenuTabControl.SuspendLayout();
             this.CareerTab.SuspendLayout();
             this.CareerSelectGroupBox.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // CareerTab
             // 
+            this.CareerTab.Controls.Add(this.button1);
             this.CareerTab.Controls.Add(this.CareerSelectGroupBox);
             this.CareerTab.Controls.Add(this.FindStudyPlanButton);
             this.CareerTab.Controls.Add(this.SkillSelectGroupBox);
@@ -128,7 +130,6 @@
             this.CareerTab.TabIndex = 0;
             this.CareerTab.Text = "Career";
             this.CareerTab.UseVisualStyleBackColor = true;
-            this.CareerTab.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // CareerSelectGroupBox
             // 
@@ -405,7 +406,6 @@
             this.removeToolStripMenuItem});
             this.StudyPlanMenuStrip.Name = "StudyPlanMenuStrip";
             this.StudyPlanMenuStrip.Size = new System.Drawing.Size(166, 70);
-            this.StudyPlanMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // viewDetailsToolStripMenuItem
             // 
@@ -493,7 +493,6 @@
             this.SkillsComboBox.Name = "SkillsComboBox";
             this.SkillsComboBox.Size = new System.Drawing.Size(261, 21);
             this.SkillsComboBox.TabIndex = 0;
-            this.SkillsComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MainMenuStrip
             // 
@@ -597,6 +596,15 @@
             this.LogInLabel.TabIndex = 0;
             this.LogInLabel.Text = "User";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(298, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -632,15 +640,7 @@
 
         }
 
-        private void tabPage1_Click(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
 
         private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -678,7 +678,7 @@
         private System.Windows.Forms.Label LogInLabel;
         private System.Windows.Forms.TextBox textbox1;
 
-        
+
         private void LogInPanelDisappear()
         {
             LogInPanel.Visible = false;
@@ -730,7 +730,7 @@
             SetStudentTabs();
             NewCareerGroupBox.Visible = false;
             CareerSelectGroupBox.Visible = true;
-            
+
         }
 
         public void DisplayFacultyMemberInterface()
@@ -740,18 +740,29 @@
             NewCareerGroupBox.Visible = true;
             CareerSelectGroupBox.Visible = false;
             SkillSelectGroupBox.Visible = true;
-            
+
         }
 
         public void DisplayAdminInterface()
         {
             EnterMainMenu();
             SetAdminTabs();
-            
+
         }
         private void AddSkillToSkillSelect(ISkill skill)
         {
             SkillSelectList.Items.Add(skill);
+        }
+        public void DisplayErrorMessage()
+        {
+            System.Windows.Forms.MessageBox.Show("Invalid User and password");
+        }
+
+
+        void IMainMenuView.ExitMainMenu()
+        {
+            MainMenuDisappear();
+            LogInPanelAppear();
         }
 
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
@@ -782,21 +793,10 @@
         private System.Windows.Forms.Label NewCareerDescriptionLabel;
         private System.Windows.Forms.TextBox NewCareerNameTextBox;
         private System.Windows.Forms.Label NewCareerNameLabel;
+        private System.Windows.Forms.Button button1;
+        
 
-
-        public void DisplayErrorMessage()
-        {
-            System.Windows.Forms.MessageBox.Show("Invalid User and password");
-        }
-
-
-        void IMainMenuView.ExitMainMenu()
-        {
-            MainMenuDisappear();
-            LogInPanelAppear();
-        }
-
-       
+      
     }
 }
 

@@ -50,6 +50,12 @@
     <Compile Include="GUI\InvalidProffession.cs" />
     <Compile Include="GUI\IProffesion.cs" />
     <Compile Include="GUI\IUser.cs" />
+    <Compile Include="GUI\MainMenuTabControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainMenuTabControl.Designer.cs">
+      <DependentUpon>MainMenuTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\StudentTabController.cs" />
     <Compile Include="Career.cs" />
     <Compile Include="GUI\User.cs" />
@@ -74,12 +80,6 @@
     <Compile Include="GUI\SubjectDetails.Designer.cs">
       <DependentUpon>SubjectDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudyPlan\Materie\ICredit.cs" />
     <Compile Include="StudyPlan\Materie\ISubject.cs" />
     <Compile Include="GUI\ProffesionStudent.cs" />
@@ -94,11 +94,11 @@
     <Compile Include="StudyPlan\Skills\Skill.cs" />
     <Compile Include="StudyPlan\StudyPlan.cs" />
     <Compile Include="StudyPlan\YearOfStudy.cs" />
+    <EmbeddedResource Include="GUI\MainMenuTabControl.resx">
+      <DependentUpon>MainMenuTabControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SubjectDetails.resx">
       <DependentUpon>SubjectDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

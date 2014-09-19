@@ -13,8 +13,8 @@ C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Relea
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.pdb
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.csprojResolveAssemblyReference.cache
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.SubjectDetails.resources
-C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.MainMenu.resources
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.Properties.Resources.resources
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.csproj.GenerateResource.Cache
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\bin\Release\EvidentaInvatamant.exe
 C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\bin\Release\EvidentaInvatamant.pdb
+C:\Users\magnus\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Release\EvidentaInvatamant.MainMenu.resources
