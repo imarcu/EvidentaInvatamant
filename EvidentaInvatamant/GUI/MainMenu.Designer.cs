@@ -31,7 +31,7 @@ namespace EvidentaInvatamant
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "Topic1",
             "3"}, -1);
@@ -77,8 +77,6 @@ namespace EvidentaInvatamant
             this.SkillNameLabel = new System.Windows.Forms.Label();
             this.SkillLabel = new System.Windows.Forms.Label();
             this.SkillsComboBox = new System.Windows.Forms.ComboBox();
-            this.Users = new System.Windows.Forms.TabPage();
-            this.NewUserNameLabel = new System.Windows.Forms.Label();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,7 +88,6 @@ namespace EvidentaInvatamant
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.LogInLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.MainMenuTabControl.SuspendLayout();
             this.CareerTab.SuspendLayout();
             this.CareerSelectGroupBox.SuspendLayout();
@@ -101,7 +98,6 @@ namespace EvidentaInvatamant
             this.StudyPlansTab.SuspendLayout();
             this.StudyPlanMenuStrip.SuspendLayout();
             this.SkillsTab.SuspendLayout();
-            this.Users.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LogInPanel.SuspendLayout();
@@ -114,7 +110,6 @@ namespace EvidentaInvatamant
             this.MainMenuTabControl.Controls.Add(this.SubjectsTab);
             this.MainMenuTabControl.Controls.Add(this.StudyPlansTab);
             this.MainMenuTabControl.Controls.Add(this.SkillsTab);
-            this.MainMenuTabControl.Controls.Add(this.Users);
             this.MainMenuTabControl.Location = new System.Drawing.Point(5, 1);
             this.MainMenuTabControl.Name = "MainMenuTabControl";
             this.MainMenuTabControl.SelectedIndex = 0;
@@ -305,9 +300,9 @@ namespace EvidentaInvatamant
             this.SubjectsViewList.ContextMenuStrip = this.SubjectsMenuStrip;
             this.SubjectsViewList.FullRowSelect = true;
             this.SubjectsViewList.GridLines = true;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.SubjectsViewList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.SubjectsViewList.Location = new System.Drawing.Point(26, 50);
             this.SubjectsViewList.Name = "SubjectsViewList";
             this.SubjectsViewList.Size = new System.Drawing.Size(622, 277);
@@ -502,26 +497,6 @@ namespace EvidentaInvatamant
             this.SkillsComboBox.TabIndex = 0;
             this.SkillsComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Users
-            // 
-            this.Users.Controls.Add(this.textBox1);
-            this.Users.Controls.Add(this.NewUserNameLabel);
-            this.Users.Location = new System.Drawing.Point(4, 22);
-            this.Users.Name = "Users";
-            this.Users.Size = new System.Drawing.Size(678, 398);
-            this.Users.TabIndex = 4;
-            this.Users.Text = "Users";
-            this.Users.UseVisualStyleBackColor = true;
-            // 
-            // NewUserNameLabel
-            // 
-            this.NewUserNameLabel.AutoSize = true;
-            this.NewUserNameLabel.Location = new System.Drawing.Point(35, 51);
-            this.NewUserNameLabel.Name = "NewUserNameLabel";
-            this.NewUserNameLabel.Size = new System.Drawing.Size(57, 13);
-            this.NewUserNameLabel.TabIndex = 0;
-            this.NewUserNameLabel.Text = "UserName";
-            // 
             // MainMenuStrip
             // 
             this.MainMenuStrip.Dock = System.Windows.Forms.DockStyle.None;
@@ -624,13 +599,6 @@ namespace EvidentaInvatamant
             this.LogInLabel.TabIndex = 0;
             this.LogInLabel.Text = "User";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(98, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,8 +623,6 @@ namespace EvidentaInvatamant
             this.StudyPlanMenuStrip.ResumeLayout(false);
             this.SkillsTab.ResumeLayout(false);
             this.SkillsTab.PerformLayout();
-            this.Users.ResumeLayout(false);
-            this.Users.PerformLayout();
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
             this.MainPanel.ResumeLayout(false);
@@ -668,6 +634,11 @@ namespace EvidentaInvatamant
 
         }
 
+        private void tabPage1_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             throw new System.NotImplementedException();
@@ -675,13 +646,10 @@ namespace EvidentaInvatamant
 
         private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ContextMenuStrip.Show();
         }
 
-        private void tabPage1_Click(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+
 
         #endregion
 
@@ -710,8 +678,6 @@ namespace EvidentaInvatamant
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox UserNameTextBox;
         private System.Windows.Forms.Label LogInLabel;
-        private System.Windows.Forms.TabPage Users;
-        private System.Windows.Forms.Label NewUserNameLabel;
         private System.Windows.Forms.TextBox textbox1;
 
         
@@ -818,7 +784,6 @@ namespace EvidentaInvatamant
         private System.Windows.Forms.Label NewCareerDescriptionLabel;
         private System.Windows.Forms.TextBox NewCareerNameTextBox;
         private System.Windows.Forms.Label NewCareerNameLabel;
-        private TextBox textBox1;
 
 
         public void DisplayErrorMessage()
