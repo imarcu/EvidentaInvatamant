@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EvidentaInvatamant
 {
-    public partial class MainMenu : Form,IMainMenuView
+    public partial class MainMenu : Form
     {
         ILogInPanelController logInPanelController;
 

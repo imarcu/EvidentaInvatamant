@@ -55,6 +55,7 @@
             this.SkillsListBox = new System.Windows.Forms.CheckedListBox();
             this.PreRequisitesListBox = new System.Windows.Forms.CheckedListBox();
             this.AddNewSkill = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -297,11 +298,19 @@
             this.AddNewSkill.Text = "Add New Skill";
             this.AddNewSkill.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(36, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 34;
+            // 
             // SubjectDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 567);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.AddNewSkill);
             this.Controls.Add(this.PreRequisitesListBox);
             this.Controls.Add(this.SkillsListBox);
@@ -360,5 +369,6 @@
         private System.Windows.Forms.CheckedListBox PreRequisitesListBox;
         private System.Windows.Forms.CheckedListBox SkillsListBox;
         private System.Windows.Forms.TextBox TopicSelectTextBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

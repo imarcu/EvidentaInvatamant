@@ -31,7 +31,7 @@ namespace EvidentaInvatamant
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             "Topic1",
             "3"}, -1);
@@ -300,9 +300,9 @@ namespace EvidentaInvatamant
             this.SubjectsViewList.ContextMenuStrip = this.SubjectsMenuStrip;
             this.SubjectsViewList.FullRowSelect = true;
             this.SubjectsViewList.GridLines = true;
-            listViewItem2.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.SubjectsViewList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.SubjectsViewList.Location = new System.Drawing.Point(26, 50);
             this.SubjectsViewList.Name = "SubjectsViewList";
             this.SubjectsViewList.Size = new System.Drawing.Size(622, 277);
