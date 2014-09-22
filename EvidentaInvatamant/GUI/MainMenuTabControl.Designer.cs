@@ -86,7 +86,6 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.LogInLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.MainMenuTabControl.SuspendLayout();
             this.CareerTab.SuspendLayout();
             this.CareerSelectGroupBox.SuspendLayout();
@@ -117,7 +116,6 @@
             // 
             // CareerTab
             // 
-            this.CareerTab.Controls.Add(this.button1);
             this.CareerTab.Controls.Add(this.CareerSelectGroupBox);
             this.CareerTab.Controls.Add(this.FindStudyPlanButton);
             this.CareerTab.Controls.Add(this.SkillSelectGroupBox);
@@ -596,15 +594,6 @@
             this.LogInLabel.TabIndex = 0;
             this.LogInLabel.Text = "User";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(298, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,7 +782,6 @@
         private System.Windows.Forms.Label NewCareerDescriptionLabel;
         private System.Windows.Forms.TextBox NewCareerNameTextBox;
         private System.Windows.Forms.Label NewCareerNameLabel;
-        private System.Windows.Forms.Button button1;
         
 
       
