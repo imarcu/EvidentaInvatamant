@@ -44,7 +44,7 @@ namespace EvidentaInvatamant
             mainMenu.SubjectTabController = subjectTabController;
             mainMenu.SkillTabController = skillTabController;
             mainMenu.StudyPlanController = studyPlanController;
-            
+            // change
 
             subjectDetails.MainMenu = mainMenu;
             Application.Run(mainMenu);
