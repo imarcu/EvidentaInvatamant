@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    interface IYearOfStudy
+    public interface IYearOfStudy
     {
-        void Add(ISubject materie);
+        void AddPrimary(ISubject materie);
+        bool ValidYear();
+        List<ISubject> AllSubjects { get; }
+
+        void AddComplementary(ISubject subject);
+        int NrOfSubjects { get; set; }
+        int Size { get; set; }
+
+        string Credits { get; set; }
     }
 }

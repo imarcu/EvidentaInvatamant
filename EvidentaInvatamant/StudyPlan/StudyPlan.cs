@@ -6,29 +6,116 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
+    [Serializable]
     class StudyPlan:IStudyPlan
     {
-        ISchedule schedule;
-        List<ISubject> materii;
+        List<IYearOfStudy> years;
+        ISubjectRepository complementarySubjects;
+        ISubjectRepository requiredSubjects;
 
-        public void Print()
+        public StudyPlan(ISubjectRepository complementarySubjects)
         {
-            throw new NotImplementedException();
-        }
-        
+            this.complementarySubjects = complementarySubjects;
+            requiredSubjects = new SubjectRepository();
+            this.years = new List<IYearOfStudy>();
+            CreateYear(0);
 
+        }
         public void ComputePlan()
         {
-            int tempMaxLine = 0;
-            foreach (ISubject materie in materii)
+
+            AddPrimarySubjects();
+            complementarySubjects.RemoveRepository(requiredSubjects);
+            AddComplementarySubjects();
+        }
+
+        private void AddComplementarySubjects()
+        {
+            foreach(IYearOfStudy year in years)
             {
-                tempMaxLine = System.Math.Max(tempMaxLine, materie.GetLargestSubjectLine());
+                if (year.ValidYear())
+                {
+                    continue;
+                }
+                else
+                {
+                    year.AddComplementary(GetAComplementarySubject());
+                }
             }
+        }
+
+        private ISubject GetAComplementarySubject()
+        {
+           if(complementarySubjects.IsNotEmpty())
+           {
+               ISubject chosenOne = complementarySubjects.GetAt(0);
+            complementarySubjects.Remove(chosenOne);
+            return chosenOne;
+           }
+           else
+           {
+               return null;
+           }
 
         }
+
+        private void AddPrimarySubjects()
+        {
+            this.requiredSubjects.SortBySubjectLine();
+             for(int i=0 ;i <requiredSubjects.GetSize();i++)
+             {
+                 ISubject current = requiredSubjects.GetAt(i);
+                 AddInYear(current, i);
+             }
+
+        }
+
+
+        private void AddInYear(ISubject current, int i)
+        {
+            if (YearIsNotCreated(i))
+            {
+                CreateYear(i);
+            }
+            years[i].AddPrimary(current);
+
+        }
+
+        private void CreateYear(int i)
+        {
+            while(years.Count < i+1)
+            {
+                years.Add(new YearOfStudy(10, 10));
+            }
+        }
+
+        private bool YearIsNotCreated(int i)
+        {
+            return years.Count < i+1;
+        }
+
         public void GetSubjectsFrom(ISkill skill)
         {
-            skill.PutSubjectsIn(materii);
+            skill.SendSubjectsTo(requiredSubjects);
+        }
+
+
+        public int Years
+        {
+            get
+            {
+                return years.Count;
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+        public IYearOfStudy GetYearAt(int i)
+        {
+            return years[i];
         }
     }
 }

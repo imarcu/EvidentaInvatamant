@@ -10,7 +10,10 @@ namespace EvidentaInvatamant
     {
         int number;
 
-
+        public Credit(int number)
+        {
+            this.number = number;
+        }
 
         public int compareTo(ICredit credit)
         {

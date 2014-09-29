@@ -8,6 +8,6 @@ namespace EvidentaInvatamant
 {
     interface ISubjectFactory
     {
-        ISubject Make(string name, string topic, ICredit credit, IPreRequisites prerequisites);
+        ISubject Make();
     }
 }

@@ -8,3 +8,13 @@ C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Debug\
 C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.pdb
 C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.MainMenu.resources
 C:\Users\itsix\Documents\GitHub\EvidentaInvatamant\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.SubjectDetails.resources
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\bin\Debug\EvidentaInvatamant.exe.config
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.exe
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.pdb
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\bin\Debug\EvidentaInvatamant.exe
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\bin\Debug\EvidentaInvatamant.pdb
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.csprojResolveAssemblyReference.cache
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.MainMenu.resources
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.SubjectDetails.resources
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.Properties.Resources.resources
+C:\Users\magnus\Desktop\EvidentaInvatamant-2b293f25b93a7156cc32917d54430a1d88e95e85\EvidentaInvatamant\obj\Debug\EvidentaInvatamant.csproj.GenerateResource.Cache

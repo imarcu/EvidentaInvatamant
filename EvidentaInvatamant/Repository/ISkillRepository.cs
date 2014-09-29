@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    interface ISkillRepository
+    public interface ISkillRepository
     {
-        void Add(ISkill skill);
+        bool Add(ISkill skill);
         void Remove(ISkill skill);
         ISkill GetAt(int index);
-        ISkillRepository SearchByName(string name);
+        int GetSize();
+        ISkill SearchByName(string name);
     }
 }

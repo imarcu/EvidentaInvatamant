@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EvidentaInvatamant
 
 {
-    interface IPreRequisites
+    public interface IPreRequisites
     {
         int GetlargestSubjectLine();
         void Add(ISubject subject);

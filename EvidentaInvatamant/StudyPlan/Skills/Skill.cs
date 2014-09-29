@@ -6,30 +6,35 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
+    [Serializable]
     class Skill:ISkill
     {
         string name;
         string description;
-        List<ISubject> subjects;
+        ISubjectRepository subjectRepository;
 
         public Skill(string name, string description)
         {
             this.name = name;
             this.description = description;
-            subjects = new List<ISubject>();
+            subjectRepository = new SubjectRepository();
         }
         public void AddSubject(ISubject subject)
         {
-            subjects.Add(subject);
+            subjectRepository.Add(subject);
+
         }
         public void RemoveSubject(ISubject subject)
         {
-            subjects.Remove(subject);
+            subjectRepository.Remove(subject);
         }
 
-        public void PutSubjectsIn(List<ISubject> list)
+        public void SendSubjectsTo(ISubjectRepository subjectRepository)
         {
-            list.AddRange(subjects);
+            for (int i = 1; i < this.subjectRepository.GetSize(); i++)
+            {
+                subjectRepository.Add(this.subjectRepository.GetAt(i));
+            }
         }
         public override string ToString()
         {
@@ -38,7 +43,40 @@ namespace EvidentaInvatamant
 
         public bool MatchesName(string name)
         {
-            return this.name.Contains(name);
+            return this.name.Equals(name);
         }
+
+        #region Properties
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                this.name = value;
+            }
+        }
+
+
+        public string Description
+        {
+            get
+            {
+                return this.description;
+            }
+            set
+            {
+                this.description = value;
+            }
+        }
+
+
+        public ISubjectRepository Subjects
+        {
+            get { return this.subjectRepository; }
+        }
+    #endregion
     }
 }

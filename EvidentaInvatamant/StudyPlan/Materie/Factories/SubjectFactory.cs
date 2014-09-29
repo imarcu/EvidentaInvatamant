@@ -8,9 +8,9 @@ namespace EvidentaInvatamant.Materie
 {
     class SubjectFactory:ISubjectFactory
     {
-        public ISubject Make(string name, string topic, ICredit credit, IPreRequisites prerequisites)
+        public ISubject Make()
         {
-            return new Subject(prerequisites, name, topic, credit);
+            return new Subject();
         }
     }
 }

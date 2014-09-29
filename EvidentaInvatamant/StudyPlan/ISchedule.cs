@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    interface ISchedule
+    public interface ISchedule
     {
         void AddInYear(ISubject materie);
         void NextYear();
+        int GetYearNumber();
+        void AddAatYear(ISubject subject, int year);
+
+        IEnumerable<IYearOfStudy> Years { get; set; }
+        int NrOfYears { get; }
+        IYearOfStudy GetYearindex(int index);
     }
 }

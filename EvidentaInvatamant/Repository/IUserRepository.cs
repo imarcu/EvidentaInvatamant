@@ -10,6 +10,6 @@ namespace EvidentaInvatamant
     {
         void Add(IUser user);
         IUser Search(string name, string password);
-
+        void SetView(IUserInterface userinterface);
     }
 }

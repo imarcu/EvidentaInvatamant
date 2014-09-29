@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    class Career
+    [Serializable]
+    class Career:ICareer
     {
         string name;
         string description;
         List<ISkill> skills;
         IStudyPlan studyPlan;
 
-        public Career(string name, string description)
+        public Career(string name, string description,ISubjectRepository subjectRepository)
         {
             this.name = name;
             this.description = description;
             skills = new List<ISkill>();
-            studyPlan = new StudyPlan();
+            studyPlan = new StudyPlan(subjectRepository);
         }
         public void AddSkill(ISkill skill)
         {
             skills.Add(skill);
+        }
+        public void RemoveSkill(ISkill skill)
+        {
+            skills.Remove(skill);
         }
         public void GatherSubjects()
         {
@@ -31,11 +36,25 @@ namespace EvidentaInvatamant
                 studyPlan.GetSubjectsFrom(skill);
             }
         }
-        void ComputePlan()
+        public void ComputePlan()
         {
+            GatherSubjects();
             studyPlan.ComputePlan();
+        }
+        public override string ToString()
+        {
+            return name;
+        }
+        public string GetDescription()
+        {
+            return description;
         }
 
 
+        public ISchedule GetSchedule()
+        {
+            ComputePlan();
+            return studyPlan.GetSchedule();
+        }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    class UserRepository:IUserRepository
+    [Serializable]
+    public class UserRepository:IUserRepository
     {
         List<IUser> users;
         IUser invalidUser;
@@ -16,9 +17,7 @@ namespace EvidentaInvatamant
             users = new List<IUser>();
             this.invalidUser = invalidUser;
             
-        }
-
-       
+        }     
 
 
 
@@ -38,6 +37,16 @@ namespace EvidentaInvatamant
             }
             return invalidUser;
             
+        }
+
+
+        public void SetView(IUserInterface userinterface)
+        {
+            foreach (IUser user in users)
+            {
+                user.SetView(userinterface);
+            }
+            invalidUser.SetView(userinterface);
         }
     }
 }

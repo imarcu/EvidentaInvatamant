@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 namespace EvidentaInvatamant
 
 {
+    [Serializable]
     class PreRequisites:IPreRequisites
     {
-        List<ISubject> preRequisites;
-
-        
+        List<ISubject> preRequisites = new List<ISubject>();              
 
         private bool ListIsEmpty()
         {
-            return (preRequisites.Count == 0);
-                
+            return (preRequisites.Count == 0);                
         }
-
 
         public int GetlargestSubjectLine()
         {
@@ -28,7 +25,7 @@ namespace EvidentaInvatamant
             }
             else
             {
-                return 1;
+                return 1 + MaxSubjectLine();
             }
         }
         private int MaxSubjectLine()
@@ -41,23 +38,18 @@ namespace EvidentaInvatamant
             }
             return localMax;
         }
-
         public void Add(ISubject subject)
         {
             preRequisites.Add(subject);
         }
-
-
         public void Remove(ISubject subject)
         {
             preRequisites.Remove(subject);
         }
-
         public void RemoveAt(int index)
         {
             preRequisites.RemoveAt(index);
         }
-
         public ISubject GetAt(int index)
         {
             return preRequisites[index];

@@ -44,48 +44,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Control\ILogInPanelController.cs" />
-    <Compile Include="GUI\Control\LogInPanelController.cs" />
-    <Compile Include="GUI\IMainMenuView.cs" />
-    <Compile Include="GUI\InvalidProffession.cs" />
-    <Compile Include="GUI\IProffesion.cs" />
-    <Compile Include="GUI\IUser.cs" />
-    <Compile Include="GUI\MainMenuTabControl.cs">
+    <Compile Include="GUI\Career Tab\ICareerMode.cs" />
+    <Compile Include="GUI\Career Tab\ChooseCareerMode.cs" />
+    <Compile Include="GUI\Career Tab\ICareerModeVIew.cs" />
+    <Compile Include="GUI\Career Tab\NewCareerMode.cs" />
+    <Compile Include="GUI\Skill Tab\ISkillTabController.cs" />
+    <Compile Include="GUI\Skill Tab\ISkillTabVIew.cs" />
+    <Compile Include="GUI\Subject Details\ISubjectDetailsController.cs" />
+    <Compile Include="GUI\Subject Details\ISubjectsDetailsView.cs" />
+    <Compile Include="GUI\Subject Details\SubjectDetailsController.cs" />
+    <Compile Include="GUI\SubjectTab\ISubjectTabController.cs" />
+    <Compile Include="GUI\SubjectTab\ISubjectTabView.cs" />
+    <Compile Include="GUI\Skill Tab\SkillTabController.cs" />
+    <Compile Include="GUI\SubjectTab\SubjectTabController.cs" />
+    <Compile Include="StudyPlan\ICareer.cs" />
+    <Compile Include="GUI\Career Tab\CareerTabController.cs" />
+    <Compile Include="GUI\StudyPlan\IStudyPlanController.cs" />
+    <Compile Include="GUI\StudyPlan\IStudyPlanView.cs" />
+    <Compile Include="GUI\LogIn\ILogInPanelController.cs" />
+    <Compile Include="GUI\LogIn\LogInPanelController.cs" />
+    <Compile Include="GUI\Career Tab\ICareerTabController.cs" />
+    <Compile Include="GUI\Career Tab\ICareeTabView.cs" />
+    <Compile Include="GUI\LogIn\ILogInPanelView.cs" />
+    <Compile Include="GUI\LogIn\InvalidProffession.cs" />
+    <Compile Include="GUI\LogIn\IProffesion.cs" />
+    <Compile Include="GUI\LogIn\IUser.cs" />
+    <Compile Include="GUI\LogIn\IUserInterface.cs" />
+    <Compile Include="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MainMenuTabControl.Designer.cs">
-      <DependentUpon>MainMenuTabControl.cs</DependentUpon>
+    <Compile Include="GUI\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\StudentTabController.cs" />
-    <Compile Include="Career.cs" />
-    <Compile Include="GUI\User.cs" />
+    <Compile Include="StudyPlan\Career.cs" />
+    <Compile Include="GUI\LogIn\User.cs" />
+    <Compile Include="GUI\StudyPlan\StudyPlanController.cs" />
+    <Compile Include="Repository\ApplicationData.cs" />
+    <Compile Include="Repository\CareerRepository.cs" />
+    <Compile Include="Repository\ICareerRepository.cs" />
     <Compile Include="Repository\ISkillRepository.cs" />
     <Compile Include="Repository\ISubjectRepository.cs" />
     <Compile Include="Repository\IUserRepository.cs" />
     <Compile Include="Repository\SkillRepository.cs" />
     <Compile Include="Repository\SubjectRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="StudyPlan\Materie\Factories\IPreRequisitesFactory.cs" />
-    <Compile Include="StudyPlan\Materie\Factories\PreRequisitesFactory.cs" />
     <Compile Include="StudyPlan\Materie\IPreRequisites.cs" />
-    <Compile Include="StudyPlan\Materie\Factories\ISubjectFactory.cs" />
     <Compile Include="StudyPlan\Materie\PreRequisites.cs" />
-    <Compile Include="StudyPlan\Materie\Factories\SubjectFactory.cs" />
-    <Compile Include="StudyPlan\ISchedule.cs" />
     <Compile Include="StudyPlan\IYearOfStudy.cs" />
-    <Compile Include="StudyPlan\Materie\Credit.cs" />
     <Compile Include="GUI\SubjectDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\SubjectDetails.Designer.cs">
       <DependentUpon>SubjectDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudyPlan\Materie\ICredit.cs" />
     <Compile Include="StudyPlan\Materie\ISubject.cs" />
-    <Compile Include="GUI\ProffesionStudent.cs" />
-    <Compile Include="GUI\ProffesionFacultyMember.cs" />
-    <Compile Include="GUI\ProffesionAdmin.cs" />
-    <Compile Include="StudyPlan\Schedule.cs" />
+    <Compile Include="GUI\LogIn\ProffesionStudent.cs" />
+    <Compile Include="GUI\LogIn\ProffesionFacultyMember.cs" />
+    <Compile Include="GUI\LogIn\ProffesionAdmin.cs" />
     <Compile Include="StudyPlan\Skills\ISkill.cs" />
     <Compile Include="StudyPlan\IStudyPlan.cs" />
     <Compile Include="StudyPlan\Materie\Subject.cs" />
@@ -94,8 +109,8 @@
     <Compile Include="StudyPlan\Skills\Skill.cs" />
     <Compile Include="StudyPlan\StudyPlan.cs" />
     <Compile Include="StudyPlan\YearOfStudy.cs" />
-    <EmbeddedResource Include="GUI\MainMenuTabControl.resx">
-      <DependentUpon>MainMenuTabControl.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SubjectDetails.resx">
       <DependentUpon>SubjectDetails.cs</DependentUpon>

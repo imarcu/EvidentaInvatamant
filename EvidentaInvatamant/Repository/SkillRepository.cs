@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    class SkillRepository:ISkillRepository
+    [Serializable]
+    public class SkillRepository:ISkillRepository
     {
         List<ISkill> skills;
 
@@ -15,9 +16,18 @@ namespace EvidentaInvatamant
             skills = new List<ISkill>();
         }
 
-        public void Add(ISkill skill)
+        public bool Add(ISkill skill)
         {
-            skills.Add(skill);
+            if (NotAlreadyIn(skill))
+            {
+                skills.Add(skill);
+                return true;
+            }
+            return false;
+        }
+        private bool NotAlreadyIn(ISkill skill)
+        {
+            return SearchByName(skill.Name) == null;
         }
 
         public void Remove(ISkill skill)
@@ -30,16 +40,25 @@ namespace EvidentaInvatamant
             return skills[index];
         }
 
-        public ISkillRepository SearchByName(string name)
+        public ISkill SearchByName(string name)
         {
-            ISkillRepository tempRepository = new SkillRepository();
+           
 
             foreach (ISkill skill in skills)
             {
-                //
+                if (skill.MatchesName(name))
+                {
+                    return skill;
+                }
             }
 
-            return tempRepository;
+            return null;
+        }
+
+
+        public int GetSize()
+        {
+            return skills.Count();
         }
     }
 }

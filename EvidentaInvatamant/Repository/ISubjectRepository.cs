@@ -6,12 +6,30 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    interface ISubjectRepository
+    public interface ISubjectRepository
     {
         void Add(ISubject subject);
+
         void Remove(ISubject subject);
-        ISubjectRepository SearchByName(string name);
+
+        ISubject SearchByName(string name);
+
+        bool DoesNotContain(ISubject subject);
+
         ISubject GetAt(int index);
 
+        void CloneRepositoryTo(ISubjectRepository target);
+
+        void RemoveRepository(ISubjectRepository target);
+
+        int GetSize();
+
+        void Clear();
+
+        void AddRange(List<ISubject> list);
+
+        void SortBySubjectLine();
+
+        bool IsNotEmpty();
     }
 }

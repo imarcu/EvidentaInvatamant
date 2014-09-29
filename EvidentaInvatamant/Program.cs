@@ -16,18 +16,39 @@ namespace EvidentaInvatamant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            //testing 
+
             MainMenu mainMenu = new MainMenu();
-            IUserRepository users = new UserRepository(new User("","",new InvalidProffession((IMainMenuView)mainMenu )));
-            users.Add(new User("admin", "admin", new ProffesionAdmin((IMainMenuView)mainMenu)));
-            users.Add(new User("student", "student",new ProffesionStudent((IMainMenuView)mainMenu)));
-            users.Add(new User("faculty","faculty",new ProffesionFacultyMember((IMainMenuView)mainMenu)));
-            ILogInPanelController logInPanelController = new LogInPanelController(mainMenu, users);
-            mainMenu.LogInPanelController = logInPanelController;
+            SubjectDetails subjectDetails = new SubjectDetails();
+
+            ApplicationData context = new ApplicationData();
             
-           
+            context = context.LoadData();
+            context.UserInterface = mainMenu;
+            context.EnableUsers();
+
+            //context.SubjectRepository = new SubjectRepository();
+           //context.SkillRepository = new SkillRepository();
+            //context.CareerRepository = new CareerRepository();
+           // context.UserRepository.Add(new User("invalid","invalid",new InvalidProffession(mainMenu)));
+            ILogInPanelController logInPanelController = new LogInPanelController(mainMenu, context.UserRepository);
+            ICareerTabController careerControl = new CareerTabController(context.CareerRepository, mainMenu, context.SkillRepository);
+            ISubjectDetailsController subjectDetailsControl  = new SubjectDetailsController(subjectDetails,context.SubjectRepository,context.SkillRepository);
+            ISubjectTabController subjectTabController = new SubjectTabController(mainMenu, context.SubjectRepository, subjectDetails);
+            ISkillTabController skillTabController = new SkillTabController(mainMenu, context.SkillRepository);
+            IStudyPlanController studyPlanController = new StudyPlanController(mainMenu,context.SubjectRepository);
+
+            careerControl.StudyPlanController = studyPlanController;
+            mainMenu.CareerTabController = careerControl;
+            mainMenu.LogInPanelController = logInPanelController;
+            subjectDetails.SubjectDetailsController = subjectDetailsControl;
+            mainMenu.SubjectTabController = subjectTabController;
+            mainMenu.SkillTabController = skillTabController;
+            mainMenu.StudyPlanController = studyPlanController;
+            
+
+            subjectDetails.MainMenu = mainMenu;
             Application.Run(mainMenu);
+            context.SaveData();
         }
     }
 }

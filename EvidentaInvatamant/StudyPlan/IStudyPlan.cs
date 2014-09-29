@@ -5,10 +5,11 @@ using System.Text;
 
 namespace EvidentaInvatamant
 {
-    interface IStudyPlan
+    public interface IStudyPlan
     {
-        void Print();
         void ComputePlan();
         void GetSubjectsFrom(ISkill skill);
+        IYearOfStudy GetYearAt(int i);
+        int Years { get; set; }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EvidentaInvatamant
 {
-    class SubjectRepository:ISubjectRepository
+    [Serializable]
+    public class SubjectRepository:ISubjectRepository
     {
         List<ISubject> subjects;
 
@@ -18,32 +19,83 @@ namespace EvidentaInvatamant
 
         public void Add(ISubject subject)
         {
-            subjects.Add(subject);
+           if(this.DoesNotContain(subject) || subject == null)
+           {
+               this.subjects.Add(subject);
+           }    
         }
 
         public void Remove(ISubject subject)
         {
             subjects.Remove(subject);
+            //subject = null;
         }
 
-        public ISubjectRepository SearchByName(string name)
-        {
-            ISubjectRepository tempRepository = new SubjectRepository();
-
+        public ISubject SearchByName(string name)
+        {     
             foreach (ISubject subject in subjects)
             {
                 if (subject.MatchesName(name))
                 {
-                    tempRepository.Add(subject);
+                    return subject;
                 }
             }
 
-            return tempRepository;
+            return null;
         }
 
         public ISubject GetAt(int index)
+        {            
+                return subjects[index];         
+         }
+
+        public int GetSize()
         {
-            return subjects[index];
+            return subjects.Count;
+        }
+
+        public void CloneRepositoryTo(ISubjectRepository target)
+        {
+            target.Clear();
+            target.AddRange(this.subjects);
+        }
+
+        public void Clear()
+        {
+            subjects.Clear();
+        }
+
+        public void AddRange(List<ISubject> list)
+        {
+            foreach (ISubject subject in list)
+            {
+                this.Add(subject);
+            }
+        }
+
+        public void RemoveRepository(ISubjectRepository target)
+        {
+            for(int i=0;   i<target.GetSize(); i++)
+            {
+                this.subjects.Remove(target.GetAt(i));
+            }
+        }
+
+        public void SortBySubjectLine()
+        {
+            subjects.Sort();
+        }
+
+
+        public bool DoesNotContain(ISubject subject)
+        {
+            return this.SearchByName(subject.Name) == null;
+        }
+
+
+        public bool IsNotEmpty()
+        {
+            return this.subjects.Count != 0;
         }
     }
 }

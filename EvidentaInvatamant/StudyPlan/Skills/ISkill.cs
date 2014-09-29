@@ -8,7 +8,13 @@ namespace EvidentaInvatamant
 {
     public interface ISkill
     {
-        void PutSubjectsIn(List<ISubject> list);
+        void SendSubjectsTo(ISubjectRepository subjectRepository);
+        void AddSubject(ISubject subject);
+        void RemoveSubject(ISubject subject);
         bool MatchesName(string name);
+        //Gui
+        string Name { get; set; }
+        ISubjectRepository Subjects { get;}
+        string Description { get;}
     }
 }
